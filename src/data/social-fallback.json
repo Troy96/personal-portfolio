@@ -1,0 +1,46 @@
+{
+  "twitter": [
+    {
+      "id": "tw-1",
+      "platform": "twitter",
+      "content": "Just shipped a new feature that reduced our API response times by 40%. The secret? Proper database indexing and a Redis caching layer. Sometimes the simplest solutions are the best.",
+      "url": "https://twitter.com/roy/status/1",
+      "date": "2024-12-15",
+      "engagement": { "likes": 142, "retweets": 23, "comments": 8 }
+    },
+    {
+      "id": "tw-2",
+      "platform": "twitter",
+      "content": "Hot take: The best code is the code you don't write. Before adding a new dependency, ask yourself if you really need it or if 20 lines of vanilla JS would do the job.",
+      "url": "https://twitter.com/roy/status/2",
+      "date": "2024-11-20",
+      "engagement": { "likes": 89, "retweets": 15, "comments": 12 }
+    },
+    {
+      "id": "tw-3",
+      "platform": "twitter",
+      "content": "Gave a talk at the local meetup about building performant React apps. Slides and recording coming soon!",
+      "url": "https://twitter.com/roy/status/3",
+      "date": "2024-10-05",
+      "engagement": { "likes": 67, "retweets": 8, "comments": 5 }
+    }
+  ],
+  "linkedin": [
+    {
+      "id": "li-1",
+      "platform": "linkedin",
+      "content": "Excited to share that I've been promoted to Senior Software Engineer! Grateful for an amazing team and the opportunity to lead impactful projects.",
+      "url": "https://linkedin.com/in/roy/posts/1",
+      "date": "2024-11-01",
+      "engagement": { "likes": 234, "comments": 42 }
+    },
+    {
+      "id": "li-2",
+      "platform": "linkedin",
+      "content": "After mentoring 5 junior developers this year, here are my top lessons learned about effective technical mentorship...",
+      "url": "https://linkedin.com/in/roy/posts/2",
+      "date": "2024-09-15",
+      "engagement": { "likes": 156, "comments": 28 }
+    }
+  ]
+}
