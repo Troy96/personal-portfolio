@@ -8,7 +8,7 @@ interface TimelineProps {
 export function Timeline({ children, className }: TimelineProps) {
   return (
     <div className={cn("relative space-y-8", className)}>
-      <div className="absolute left-[7px] top-2 bottom-2 w-px bg-neutral-200 dark:bg-neutral-800" />
+      <div className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-indigo-400 via-violet-400 to-fuchsia-400 dark:from-indigo-500 dark:via-violet-500 dark:to-fuchsia-500" />
       {children}
     </div>
   );
@@ -29,7 +29,7 @@ export function TimelineItem({
 }: TimelineItemProps) {
   return (
     <div className="relative pl-8">
-      <div className="absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-2 border-neutral-300 bg-white dark:border-neutral-600 dark:bg-neutral-950" />
+      <div className="absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-2 border-indigo-400 bg-white shadow-sm shadow-indigo-400/30 dark:border-indigo-500 dark:bg-neutral-950 dark:shadow-indigo-500/20" />
       <div>
         <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
           <h3 className="font-semibold text-neutral-900 dark:text-white">

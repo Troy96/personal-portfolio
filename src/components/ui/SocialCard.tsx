@@ -9,10 +9,16 @@ const platformIcons = {
   linkedin: Linkedin,
 };
 
+const platformGradients = {
+  github: "bg-neutral-100 dark:bg-neutral-800",
+  twitter: "bg-sky-50 dark:bg-sky-500/10",
+  linkedin: "bg-blue-50 dark:bg-blue-500/10",
+};
+
 const platformColors = {
   github: "text-neutral-900 dark:text-white",
   twitter: "text-sky-500",
-  linkedin: "text-blue-600",
+  linkedin: "text-blue-600 dark:text-blue-400",
 };
 
 export function SocialCard({ post }: { post: SocialPost }) {
@@ -22,10 +28,12 @@ export function SocialCard({ post }: { post: SocialPost }) {
     <Card>
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-2">
-          <Icon
-            size={16}
-            className={platformColors[post.platform]}
-          />
+          <div className={`flex h-7 w-7 items-center justify-center rounded-lg ${platformGradients[post.platform]}`}>
+            <Icon
+              size={14}
+              className={platformColors[post.platform]}
+            />
+          </div>
           <span className="text-xs font-medium capitalize text-neutral-500 dark:text-neutral-400">
             {post.platform}
           </span>
@@ -64,7 +72,7 @@ export function SocialCard({ post }: { post: SocialPost }) {
             href={post.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
+            className="text-xs font-medium text-indigo-500 hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-300 transition-colors"
           >
             View post &rarr;
           </Link>

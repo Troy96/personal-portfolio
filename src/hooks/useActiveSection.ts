@@ -25,7 +25,7 @@ export function useActiveSection() {
           }
         }
       },
-      { rootMargin: "-40% 0px -55% 0px" }
+      { rootMargin: "-20% 0px -55% 0px" }
     );
 
     for (const id of sectionIds) {

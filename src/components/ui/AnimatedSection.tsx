@@ -36,11 +36,14 @@ export function AnimatedSection({
     <div
       ref={ref}
       className={cn(
-        "opacity-0 translate-y-4 transition-all duration-600 ease-out",
-        visible && "opacity-100 translate-y-0",
+        "opacity-0 translate-y-4 scale-[0.98] transition-all duration-700",
+        visible && "opacity-100 translate-y-0 scale-100",
         className
       )}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{
+        transitionDelay: `${delay}ms`,
+        transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
+      }}
     >
       {children}
     </div>

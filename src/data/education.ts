@@ -3,17 +3,16 @@ import type { Education } from "@/types";
 export const education: Education[] = [
   {
     id: "edu-1",
-    institution: "University of Technology",
-    degree: "Bachelor of Science",
-    field: "Computer Science",
-    startDate: "2014",
-    endDate: "2018",
+    institution: "Invertis University, Bareilly",
+    degree: "Bachelor of Technology",
+    field: "Computer Science & Engineering",
+    startDate: "2015",
+    endDate: "2019",
     description:
-      "Focused on distributed systems, algorithms, and software engineering principles.",
+      "Focused on software engineering, data structures, and web technologies. Built the CRC Department web application as a final year project.",
     achievements: [
-      "Dean's List — 6 semesters",
-      "Senior thesis on distributed consensus algorithms",
-      "Teaching Assistant for Data Structures & Algorithms",
+      "Built CRC web app — application server and REST APIs with Node.js & Express",
+      "Arctic Code Vault Contributor on GitHub",
     ],
   },
 ];

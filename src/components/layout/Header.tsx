@@ -10,16 +10,16 @@ export function Header() {
   const activeSection = useActiveSection();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/80 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-950/80">
-      <div className="mx-auto flex h-14 max-w-4xl items-center justify-between px-6">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-3xl">
+      <nav className="flex h-12 items-center justify-between rounded-full border border-neutral-200/50 bg-white/70 px-5 shadow-lg shadow-neutral-900/5 backdrop-blur-xl dark:border-neutral-700/50 dark:bg-neutral-900/70 dark:shadow-neutral-900/30">
         <a
           href="#hero"
-          className="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity"
+          className="text-base font-bold tracking-tight gradient-text transition-opacity hover:opacity-80"
         >
           {siteConfig.name}
         </a>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-1">
           {navLinks
             .filter((link) => link.href !== "#hero")
             .map((link) => (
@@ -27,23 +27,28 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm transition-colors hover:text-neutral-900 dark:hover:text-white",
+                  "relative px-3 py-1.5 text-sm transition-colors rounded-full",
                   activeSection === link.href
-                    ? "text-neutral-900 dark:text-white font-medium"
-                    : "text-neutral-600 dark:text-neutral-400"
+                    ? "text-indigo-600 dark:text-indigo-400 font-medium"
+                    : "text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
                 )}
               >
                 {link.label}
+                {activeSection === link.href && (
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-4 rounded-full bg-indigo-500 dark:bg-indigo-400" />
+                )}
               </a>
             ))}
-          <ThemeToggle />
-        </nav>
+          <div className="ml-1 border-l border-neutral-200 pl-2 dark:border-neutral-700">
+            <ThemeToggle />
+          </div>
+        </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-1 md:hidden">
           <ThemeToggle />
           <MobileNav />
         </div>
-      </div>
+      </nav>
     </header>
   );
 }

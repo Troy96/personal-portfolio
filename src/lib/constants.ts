@@ -2,16 +2,17 @@ import type { NavLink } from "@/types";
 
 export const siteConfig = {
   name: "Tuhin Roy",
-  title: "Tuhin Roy - Software Engineer & Developer",
+  title: "Tuhin Roy - Senior Backend Engineer",
   description:
-    "Personal portfolio of Tuhin Roy — software engineer, builder, and lifelong learner. Explore my work, projects, and interests.",
+    "Personal portfolio of Tuhin Roy — senior backend engineer with 6.5+ years of experience in Node.js, AWS, and system design.",
   url: "https://roy.dev",
   ogImage: "/images/og.png",
   links: {
-    github: "https://github.com/roy",
-    twitter: "https://twitter.com/roy",
-    linkedin: "https://linkedin.com/in/roy",
-    email: "hello@roy.dev",
+    github: "https://github.com/Troy96/",
+    twitter: "https://x.com/2hin_roy_",
+    instagram: "https://instagram.com/2hin_roy_",
+    linkedin: "https://linkedin.com/in/tuhin-roy",
+    email: "tuhin.careers@gmail.com",
   },
 };
 

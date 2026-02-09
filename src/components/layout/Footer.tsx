@@ -11,8 +11,9 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-neutral-200 dark:border-neutral-800">
-      <div className="mx-auto max-w-4xl px-6 py-8">
+    <footer className="relative">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-px w-2/3 bg-gradient-to-r from-transparent via-indigo-300 to-transparent dark:via-indigo-500/30" />
+      <div className="mx-auto max-w-5xl px-6 py-12 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
@@ -25,7 +26,7 @@ export function Footer() {
                 href={href}
                 target={href.startsWith("mailto") ? undefined : "_blank"}
                 rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
+                className="text-neutral-500 hover:text-indigo-500 dark:text-neutral-400 dark:hover:text-indigo-400 transition-colors"
                 aria-label={label}
               >
                 <Icon size={18} />

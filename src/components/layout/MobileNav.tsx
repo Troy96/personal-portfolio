@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -10,37 +10,70 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
   const activeSection = useActiveSection();
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <div className="md:hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="rounded-md p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+        className="rounded-lg p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
         aria-label="Toggle menu"
       >
         {open ? <X size={20} /> : <Menu size={20} />}
       </button>
 
       {open && (
-        <nav className="absolute left-0 top-full w-full border-b border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950 px-6 py-4">
-          <ul className="flex flex-col gap-3">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    "text-sm transition-colors hover:text-neutral-900 dark:hover:text-white",
-                    activeSection === link.href
-                      ? "text-neutral-900 dark:text-white font-medium"
-                      : "text-neutral-600 dark:text-neutral-400"
-                  )}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
+            style={{ animation: "backdropFadeIn 0.2s ease-out" }}
+            onClick={() => setOpen(false)}
+          />
+
+          {/* Panel */}
+          <nav
+            className="fixed top-0 right-0 z-50 h-full w-[280px] bg-white/95 backdrop-blur-xl dark:bg-neutral-900/95 shadow-2xl"
+            style={{ animation: "slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1)" }}
+          >
+            <div className="flex items-center justify-end p-4">
+              <button
+                onClick={() => setOpen(false)}
+                className="rounded-lg p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                aria-label="Close menu"
+              >
+                <X size={20} />
+              </button>
+            </div>
+            <ul className="flex flex-col gap-1 px-4">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      "flex items-center rounded-lg px-4 py-3 text-sm font-medium transition-colors",
+                      activeSection === link.href
+                        ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400"
+                        : "text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-white"
+                    )}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </>
       )}
     </div>
   );

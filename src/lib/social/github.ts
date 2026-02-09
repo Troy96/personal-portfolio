@@ -1,6 +1,6 @@
 import type { GitHubRepo } from "@/types";
 
-const GITHUB_USERNAME = "roy";
+const GITHUB_USERNAME = "Troy96";
 
 export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
   const headers: HeadersInit = {
