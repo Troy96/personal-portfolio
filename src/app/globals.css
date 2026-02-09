@@ -12,19 +12,29 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
-  --accent: #6366f1;
-  --accent-secondary: #8b5cf6;
-  --accent-light: #e0e7ff;
-  --accent-muted: rgba(99, 102, 241, 0.1);
+  --accent: #92400e;
+  --accent-secondary: #b45309;
+  --accent-light: #fef3c7;
+  --accent-muted: rgba(146, 64, 14, 0.1);
+  --accent-gradient-from: #92400e;
+  --accent-gradient-to: #b45309;
+  --accent-border-subtle: #d6b583;
+  --accent-bg-subtle: #fef9ee;
+  --accent-shadow: rgba(146, 64, 14, 0.25);
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --accent: #818cf8;
-  --accent-secondary: #a78bfa;
-  --accent-light: rgba(99, 102, 241, 0.15);
-  --accent-muted: rgba(129, 140, 248, 0.1);
+  --accent: #d97706;
+  --accent-secondary: #f59e0b;
+  --accent-light: rgba(217, 119, 6, 0.15);
+  --accent-muted: rgba(217, 119, 6, 0.1);
+  --accent-gradient-from: #d97706;
+  --accent-gradient-to: #f59e0b;
+  --accent-border-subtle: rgba(217, 119, 6, 0.3);
+  --accent-bg-subtle: rgba(217, 119, 6, 0.1);
+  --accent-shadow: rgba(217, 119, 6, 0.2);
 }
 
 body {
@@ -47,10 +57,19 @@ html {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
+  background: linear-gradient(135deg, var(--accent-gradient-from), var(--accent-gradient-to));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Accent gradient utilities */
+.accent-gradient {
+  background: linear-gradient(to right, var(--accent-gradient-from), var(--accent-gradient-to));
+}
+
+.accent-gradient-br {
+  background: linear-gradient(to bottom right, var(--accent-gradient-from), var(--accent-gradient-to));
 }
 
 /* Custom scrollbar */
@@ -122,5 +141,34 @@ html {
   100% {
     transform: scale(1.5);
     opacity: 0;
+  }
+}
+
+/* Mesh blob keyframes */
+@keyframes mesh-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes mesh-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, 20px) scale(0.9); }
+  66% { transform: translate(20px, -30px) scale(1.05); }
+}
+
+@keyframes mesh-float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, 30px) scale(1.05); }
+  66% { transform: translate(-30px, -20px) scale(0.95); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

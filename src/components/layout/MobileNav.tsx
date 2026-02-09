@@ -63,7 +63,7 @@ export function MobileNav() {
                     className={cn(
                       "flex items-center rounded-lg px-4 py-3 text-sm font-medium transition-colors",
                       activeSection === link.href
-                        ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400"
+                        ? "bg-[var(--accent-bg-subtle)] text-[var(--accent)] dark:bg-[var(--accent-muted)] dark:text-[var(--accent)]"
                         : "text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-white"
                     )}
                   >

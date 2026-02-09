@@ -18,7 +18,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg p-1.5 text-neutral-500 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-500/10 dark:hover:text-indigo-400 transition-colors"
+                className="rounded-lg p-1.5 text-neutral-500 hover:bg-[var(--accent-bg-subtle)] hover:text-[var(--accent)] dark:hover:bg-[var(--accent-muted)] dark:hover:text-[var(--accent)] transition-colors"
                 aria-label={`GitHub repo for ${project.title}`}
               >
                 <Github size={16} />
@@ -29,7 +29,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg p-1.5 text-neutral-500 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-500/10 dark:hover:text-indigo-400 transition-colors"
+                className="rounded-lg p-1.5 text-neutral-500 hover:bg-[var(--accent-bg-subtle)] hover:text-[var(--accent)] dark:hover:bg-[var(--accent-muted)] dark:hover:text-[var(--accent)] transition-colors"
                 aria-label={`Live demo for ${project.title}`}
               >
                 <ExternalLink size={16} />

@@ -72,7 +72,7 @@ export function SocialCard({ post }: { post: SocialPost }) {
             href={post.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-medium text-indigo-500 hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-300 transition-colors"
+            className="text-xs font-medium text-[var(--accent)] hover:opacity-80 transition-colors"
           >
             View post &rarr;
           </Link>

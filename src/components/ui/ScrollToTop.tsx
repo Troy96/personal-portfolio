@@ -19,7 +19,7 @@ export function ScrollToTop() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed bottom-6 right-6 z-40 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 p-2.5 text-white shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 hover:scale-110 transition-all"
+      className="fixed bottom-6 right-6 z-40 rounded-full accent-gradient p-2.5 text-white shadow-lg shadow-[var(--accent-shadow)] hover:shadow-xl hover:shadow-[var(--accent-shadow)] hover:scale-110 transition-all"
       aria-label="Scroll to top"
     >
       <ArrowUp size={18} />

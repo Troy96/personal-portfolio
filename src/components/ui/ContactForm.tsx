@@ -45,7 +45,7 @@ export function ContactForm() {
   }
 
   const inputStyles =
-    "w-full rounded-lg border border-neutral-200 bg-white px-4 py-2.5 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-400 dark:border-neutral-700 dark:bg-neutral-800/50 dark:placeholder:text-neutral-500 dark:focus:ring-indigo-500/30 dark:focus:border-indigo-500/50 transition-all";
+    "w-full rounded-lg border border-neutral-200 bg-white px-4 py-2.5 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-[var(--accent-shadow)] focus:border-[var(--accent)] dark:border-neutral-700 dark:bg-neutral-800/50 dark:placeholder:text-neutral-500 dark:focus:ring-[var(--accent-shadow)] dark:focus:border-[var(--accent)] transition-all";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -119,7 +119,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-5 py-2.5 text-sm font-medium text-white shadow-md shadow-indigo-500/25 hover:shadow-lg hover:shadow-indigo-500/30 hover:brightness-110 disabled:opacity-50 disabled:hover:shadow-md transition-all"
+        className="inline-flex items-center gap-2 rounded-lg accent-gradient px-5 py-2.5 text-sm font-medium text-white shadow-md shadow-[var(--accent-shadow)] hover:shadow-lg hover:shadow-[var(--accent-shadow)] hover:brightness-110 disabled:opacity-50 disabled:hover:shadow-md transition-all"
       >
         {status === "loading" ? (
           <>
