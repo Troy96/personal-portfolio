@@ -183,22 +183,32 @@ export default async function Home() {
 
         <AnimatedSection delay={200} className="mt-16">
           <h2 className="text-xl font-semibold mb-4">What I Do</h2>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {[
+              {
+                title: "Define",
+                description:
+                  "Collaborate with stakeholders on ideation, PRDs, and technical planning to translate business needs into engineering roadmaps.",
+              },
               {
                 title: "Build",
                 description:
-                  "Full-stack web applications with modern technologies and clean architecture.",
+                  "Backend services, APIs, microservices, and cloud infrastructure at scale.",
               },
               {
-                title: "Ship",
+                title: "Lead",
                 description:
-                  "Products from idea to production with CI/CD, testing, and monitoring.",
+                  "Own technical decisions, run code reviews, mentor developers, and ship features end-to-end.",
               },
               {
-                title: "Share",
+                title: "Operate",
                 description:
-                  "Knowledge through open source, writing, and mentoring other developers.",
+                  "Deploy, monitor, and maintain production services with CI/CD pipelines, logging, and observability.",
+              },
+              {
+                title: "Accelerate",
+                description:
+                  "Use AI-assisted tooling to prototype, test, and debug faster across the development cycle.",
               },
             ].map((item) => (
               <div
