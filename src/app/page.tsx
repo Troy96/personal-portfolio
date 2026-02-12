@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Github,
@@ -160,10 +161,16 @@ export default async function Home() {
             </div>
 
             {/* Right — photo / avatar */}
-            {/* Drop your photo at public/avatar.jpg to replace this */}
             <div className="flex justify-center lg:justify-end shrink-0">
-              <div className="h-48 w-48 sm:h-56 sm:w-56 lg:h-72 lg:w-72 rounded-full accent-gradient-br flex items-center justify-center text-6xl sm:text-7xl lg:text-8xl font-bold text-white shadow-2xl shadow-[var(--accent-shadow)] ring-4 ring-[var(--accent-border-subtle)]">
-                TR
+              <div className="h-56 w-56 sm:h-72 sm:w-72 lg:h-96 lg:w-96 rounded-full overflow-hidden shadow-2xl shadow-[var(--accent-shadow)] ring-4 ring-[var(--accent-border-subtle)]">
+                <Image
+                  src="/avatar.jpg"
+                  alt="Roy"
+                  width={384}
+                  height={384}
+                  className="h-full w-full object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
