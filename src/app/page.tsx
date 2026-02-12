@@ -108,10 +108,15 @@ export default async function Home() {
               </div>
 
               <p className="max-w-2xl text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-                Backend engineer with 6.5+ years of experience building and
-                scaling systems. I specialize in Node.js, AWS, and system design.
-                Currently exploring content creation on LinkedIn and X alongside
-                looking for my next senior engineering role.
+                Backend engineer with 6.5+ years in the JS/TS stack. I&apos;ve
+                taken SaaS products from ideation to production serving 1M+
+                daily users.
+                Led a team of ~5 engineers and used AI-assisted tooling to ship
+                faster.
+              </p>
+              <p className="max-w-2xl text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+                Currently looking for my next senior backend engineering
+                role, one that blends leadership with hands-on development.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -221,22 +226,23 @@ export default async function Home() {
           <div className="mt-6 space-y-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
             <p>
               I&apos;m a backend engineer with 6.5+ years of experience
-              specializing in building and scaling systems using JavaScript,
-              Node.js, AWS, and system design. I studied Computer Science at
-              Invertis University, Bareilly, and have been shipping production
-              software ever since.
+              across the JavaScript/TypeScript stack — Node.js, Express,
+              NestJS, and AWS. I&apos;ve built microservices architectures
+              serving 1M+ daily users, cut API response times by 40% through
+              query optimization, and taken products from zero to production.
             </p>
             <p>
-              I enjoy solving complex backend problems — from designing APIs and
-              microservices to optimizing databases and setting up cloud
-              infrastructure. I care about writing clean, maintainable code and
-              building systems that scale.
+              I&apos;ve led a team of ~5 engineers — owning technical
+              decisions, running code reviews, mentoring developers, and
+              shipping features end-to-end. I&apos;ve also used AI-assisted
+              tooling (Copilot, Claude, Cursor) day-to-day to prototype
+              faster, write tests, and debug production issues.
             </p>
             <p>
-              Outside of work, you&apos;ll find me reading books, watching
-              movies and TV series, exploring content creation on LinkedIn and X,
-              or hacking on side projects. I&apos;m always learning and always
-              building.
+              Outside of engineering, I write about career growth, tech, and
+              life observations on LinkedIn and X. When I&apos;m not coding or
+              writing, you&apos;ll find me reading books, watching movies, or
+              hacking on side projects.
             </p>
           </div>
         </AnimatedSection>
