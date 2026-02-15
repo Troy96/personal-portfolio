@@ -9,10 +9,7 @@ export const education: Education[] = [
     startDate: "2015",
     endDate: "2019",
     description:
-      "Focused on software engineering, data structures, and web technologies. Built the CRC Department web application as a final year project.",
-    achievements: [
-      "Built CRC web app — application server and REST APIs with Node.js & Express",
-      "Arctic Code Vault Contributor on GitHub",
-    ],
+      "Focused on databases, cloud web services, and web applications.",
+    achievements: [],
   },
 ];
