@@ -461,7 +461,7 @@ export default async function Home() {
       <section id="interests" className="scroll-mt-20 min-h-screen flex flex-col justify-center py-20 sm:py-24">
         <AnimatedSection>
           <h2 className="text-4xl font-bold tracking-tight">
-            <span className="gradient-text">Interests & Travel</span>
+            <span className="gradient-text">Interests</span>
           </h2>
           <p className="mt-2 text-neutral-600 dark:text-neutral-400">
             What I do when I&apos;m not writing code.
@@ -469,7 +469,6 @@ export default async function Home() {
         </AnimatedSection>
 
         <AnimatedSection delay={200} className="mt-8">
-          <h3 className="text-xl font-semibold mb-4">Interests</h3>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {interests.map((interest) => {
               const Icon = iconMap[interest.icon] || Activity;
@@ -498,9 +497,9 @@ export default async function Home() {
         </AnimatedSection>
 
         <AnimatedSection delay={300} className="mt-12">
-          <h3 className="text-xl font-semibold mb-4">Travel</h3>
+          <h3 className="text-xl font-semibold mb-4">Moments</h3>
           <p className="mb-6 text-neutral-600 dark:text-neutral-400">
-            Some of my favorite moments from traveling the world.
+            Some of my favorite moments worth sharing.
           </p>
           <PhotoGrid photos={travelPhotos} />
         </AnimatedSection>
