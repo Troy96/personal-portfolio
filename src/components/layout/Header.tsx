@@ -29,7 +29,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "relative whitespace-nowrap px-2.5 py-1.5 text-[13px] transition-colors rounded-full",
+                  "relative whitespace-nowrap px-3 py-1.5 text-base transition-colors rounded-full",
                   activeSection === link.href
                     ? "text-[var(--accent)] font-medium"
                     : "text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
