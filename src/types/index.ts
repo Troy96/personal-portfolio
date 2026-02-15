@@ -81,6 +81,12 @@ export interface GitHubRepo {
   updated_at: string;
 }
 
+export interface SkillCategory {
+  id: string;
+  name: string;
+  skills: string[];
+}
+
 export interface ContactFormData {
   name: string;
   email: string;

@@ -19,6 +19,7 @@ import {
 import { siteConfig } from "@/lib/constants";
 import { education } from "@/data/education";
 import { experiences } from "@/data/experience";
+import { skillCategories } from "@/data/skills";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
 import { interests, travelPhotos } from "@/data/interests";
@@ -330,6 +331,35 @@ export default async function Home() {
               </TimelineItem>
             ))}
           </Timeline>
+        </AnimatedSection>
+      </section>
+
+      {/* Skills */}
+      <section id="skills" className="scroll-mt-20 py-20 sm:py-24">
+        <AnimatedSection>
+          <h2 className="text-4xl font-bold tracking-tight">
+            <span className="gradient-text">Skills</span>
+          </h2>
+          <p className="mt-2 text-neutral-600 dark:text-neutral-400">
+            Technologies and tools I work with.
+          </p>
+        </AnimatedSection>
+
+        <AnimatedSection delay={200} className="mt-8">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {skillCategories.map((category) => (
+              <Card key={category.id}>
+                <h3 className="font-medium text-neutral-900 dark:text-white mb-3">
+                  {category.name}
+                </h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {category.skills.map((skill) => (
+                    <Badge key={skill}>{skill}</Badge>
+                  ))}
+                </div>
+              </Card>
+            ))}
+          </div>
         </AnimatedSection>
       </section>
 
