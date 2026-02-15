@@ -30,7 +30,6 @@ import { Timeline, TimelineItem } from "@/components/ui/Timeline";
 import { Badge } from "@/components/ui/Badge";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import { SocialCard } from "@/components/ui/SocialCard";
 import { SocialTabs } from "@/components/ui/SocialTabs";
 import { Card } from "@/components/ui/Card";
 import { PhotoGrid } from "@/components/ui/PhotoGrid";
