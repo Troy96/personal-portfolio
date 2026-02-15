@@ -53,6 +53,7 @@ export interface TravelPhoto {
   alt: string;
   location: string;
   year: number;
+  objectPosition?: string;
 }
 
 export interface SocialPost {
