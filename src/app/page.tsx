@@ -12,8 +12,6 @@ import {
   Activity,
   Music,
   Presentation,
-  Star,
-  GitFork,
   type LucideIcon,
 } from "lucide-react";
 import { siteConfig } from "@/lib/constants";
@@ -23,7 +21,6 @@ import { skillCategories } from "@/data/skills";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
 import { interests, travelPhotos } from "@/data/interests";
-import { fetchGitHubRepos } from "@/lib/social/github";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { Timeline, TimelineItem } from "@/components/ui/Timeline";
@@ -70,8 +67,6 @@ const contactSocialLinks = [
 ];
 
 export default async function Home() {
-  const repos = await fetchGitHubRepos();
-
   const curatedPosts: SocialPost[] = [
     ...(socialFallback.twitter as SocialPost[]),
     ...(socialFallback.linkedin as SocialPost[]),
@@ -335,7 +330,7 @@ export default async function Home() {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="scroll-mt-20 py-20 sm:py-24">
+      <section id="skills" className="scroll-mt-20 min-h-screen flex flex-col justify-center py-20 sm:py-24">
         <AnimatedSection>
           <h2 className="text-4xl font-bold tracking-tight">
             <span className="gradient-text">Skills</span>
@@ -448,50 +443,7 @@ export default async function Home() {
           </p>
         </AnimatedSection>
 
-        {repos.length > 0 && (
-          <AnimatedSection delay={200} className="mt-8">
-            <h3 className="text-xl font-semibold mb-4">
-              GitHub Repositories
-            </h3>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {repos.slice(0, 6).map((repo) => (
-                <Card key={repo.id}>
-                  <div className="flex flex-col gap-2">
-                    <Link
-                      href={repo.html_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-neutral-900 hover:text-[var(--accent)] dark:text-white dark:hover:text-[var(--accent)] transition-colors"
-                    >
-                      {repo.name}
-                    </Link>
-                    {repo.description && (
-                      <p className="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
-                        {repo.description}
-                      </p>
-                    )}
-                    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400">
-                      {repo.language && <Badge>{repo.language}</Badge>}
-                      {repo.stargazers_count > 0 && (
-                        <span className="flex items-center gap-1">
-                          <Star size={12} /> {repo.stargazers_count}
-                        </span>
-                      )}
-                      {repo.forks_count > 0 && (
-                        <span className="flex items-center gap-1">
-                          <GitFork size={12} /> {repo.forks_count}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </AnimatedSection>
-        )}
-
-        <AnimatedSection delay={300} className="mt-8">
-          <h3 className="text-xl font-semibold mb-4">Posts & Thoughts</h3>
+        <AnimatedSection delay={200} className="mt-8">
           <div className="space-y-4">
             {curatedPosts.map((post) => (
               <SocialCard key={post.id} post={post} />
