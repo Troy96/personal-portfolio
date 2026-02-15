@@ -11,17 +11,17 @@ export function Header() {
 
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl">
-      <nav className="flex h-14 items-center justify-between rounded-full bg-white px-6 shadow-lg shadow-neutral-900/5 md:bg-white/80 md:backdrop-blur-xl dark:bg-neutral-900 dark:md:bg-neutral-900/80 dark:shadow-neutral-900/30">
+      <nav className="flex h-14 items-center justify-between rounded-full bg-white px-4 shadow-lg shadow-neutral-900/5 dark:bg-neutral-900 dark:shadow-neutral-900/30 xl:bg-white/80 xl:backdrop-blur-xl xl:dark:bg-neutral-900/80">
         <a
           href="#hero"
-          className="flex items-center gap-2 transition-opacity hover:opacity-80"
+          className="flex shrink-0 items-center gap-2 transition-opacity hover:opacity-80"
         >
           <span className="flex h-7 w-7 items-center justify-center rounded-full accent-gradient-br text-[11px] font-bold text-white">
             TR
           </span>
         </a>
 
-        <div className="hidden lg:flex items-center gap-2">
+        <div className="hidden xl:flex items-center gap-0.5 flex-nowrap overflow-hidden">
           {navLinks
             .filter((link) => link.href !== "#hero")
             .map((link) => (
@@ -29,7 +29,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "relative px-3.5 py-1.5 text-[15px] transition-colors rounded-full",
+                  "relative whitespace-nowrap px-2.5 py-1.5 text-[13px] transition-colors rounded-full",
                   activeSection === link.href
                     ? "text-[var(--accent)] font-medium"
                     : "text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
@@ -41,12 +41,12 @@ export function Header() {
                 )}
               </a>
             ))}
-          <div className="ml-2 pl-1">
+          <div className="ml-1 pl-1">
             <ThemeToggle />
           </div>
         </div>
 
-        <div className="flex items-center gap-1 lg:hidden">
+        <div className="flex items-center gap-1 xl:hidden">
           <ThemeToggle />
           <MobileNav />
         </div>
