@@ -21,7 +21,7 @@ export function Header() {
           </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-2">
           {navLinks
             .filter((link) => link.href !== "#hero")
             .map((link) => (
@@ -46,7 +46,7 @@ export function Header() {
           </div>
         </div>
 
-        <div className="flex items-center gap-1 md:hidden">
+        <div className="flex items-center gap-1 lg:hidden">
           <ThemeToggle />
           <MobileNav />
         </div>
