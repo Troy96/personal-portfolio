@@ -1,8 +1,8 @@
 import {
   Globe,
-  Lightbulb,
-  Server,
-  GraduationCap,
+  PenTool,
+  Bot,
+  Briefcase,
   type LucideIcon,
 } from "lucide-react";
 import type { Service } from "@/types";
@@ -10,9 +10,9 @@ import { Card } from "./Card";
 
 const iconMap: Record<string, LucideIcon> = {
   Globe,
-  Lightbulb,
-  Server,
-  GraduationCap,
+  PenTool,
+  Bot,
+  Briefcase,
 };
 
 export function ServiceCard({ service }: { service: Service }) {
