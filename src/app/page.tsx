@@ -28,6 +28,7 @@ import { Badge } from "@/components/ui/Badge";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { SocialCard } from "@/components/ui/SocialCard";
+import { SocialTabs } from "@/components/ui/SocialTabs";
 import { Card } from "@/components/ui/Card";
 import { PhotoGrid } from "@/components/ui/PhotoGrid";
 import { ContactForm } from "@/components/ui/ContactForm";
@@ -67,10 +68,12 @@ const contactSocialLinks = [
 ];
 
 export default async function Home() {
-  const curatedPosts: SocialPost[] = [
-    ...(socialFallback.twitter as SocialPost[]),
-    ...(socialFallback.linkedin as SocialPost[]),
-  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const twitterPosts = (socialFallback.twitter as SocialPost[]).sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+  const linkedinPosts = (socialFallback.linkedin as SocialPost[]).sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 
   const featuredProjects = projects.filter((p) => p.featured);
   const otherProjects = projects.filter((p) => !p.featured);
@@ -444,11 +447,7 @@ export default async function Home() {
         </AnimatedSection>
 
         <AnimatedSection delay={200} className="mt-8">
-          <div className="space-y-4">
-            {curatedPosts.map((post) => (
-              <SocialCard key={post.id} post={post} />
-            ))}
-          </div>
+          <SocialTabs twitterPosts={twitterPosts} linkedinPosts={linkedinPosts} />
         </AnimatedSection>
       </section>
 

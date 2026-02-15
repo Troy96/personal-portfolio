@@ -35,7 +35,7 @@ export function SocialCard({ post }: { post: SocialPost }) {
             />
           </div>
           <span className="text-xs font-medium capitalize text-neutral-500 dark:text-neutral-400">
-            {post.platform}
+            {post.platform === "twitter" ? "X" : post.platform}
           </span>
           <span className="text-xs text-neutral-400 dark:text-neutral-500">
             {new Date(post.date).toLocaleDateString("en-US", {
@@ -49,7 +49,7 @@ export function SocialCard({ post }: { post: SocialPost }) {
           {post.content}
         </p>
         <div className="flex items-center justify-between">
-          {post.engagement && (
+          {post.engagement ? (
             <div className="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-400">
               {post.engagement.likes !== undefined && (
                 <span className="flex items-center gap-1">
@@ -67,6 +67,8 @@ export function SocialCard({ post }: { post: SocialPost }) {
                 </span>
               )}
             </div>
+          ) : (
+            <div />
           )}
           <Link
             href={post.url}

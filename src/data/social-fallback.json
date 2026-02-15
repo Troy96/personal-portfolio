@@ -3,44 +3,56 @@
     {
       "id": "tw-1",
       "platform": "twitter",
-      "content": "Just shipped a new feature that reduced our API response times by 40%. The secret? Proper database indexing and a Redis caching layer. Sometimes the simplest solutions are the best.",
-      "url": "https://twitter.com/roy/status/1",
-      "date": "2024-12-15",
-      "engagement": { "likes": 142, "retweets": 23, "comments": 8 }
+      "content": "When the marketing guys can now be brave enough to code using AI,\n\nWhy are you software engineers afraid of marketing yourself on social media?",
+      "url": "https://x.com/2hin_roy_/status/2022629096124252547",
+      "date": "2026-02-14"
     },
     {
       "id": "tw-2",
       "platform": "twitter",
-      "content": "Hot take: The best code is the code you don't write. Before adding a new dependency, ask yourself if you really need it or if 20 lines of vanilla JS would do the job.",
-      "url": "https://twitter.com/roy/status/2",
-      "date": "2024-11-20",
-      "engagement": { "likes": 89, "retweets": 15, "comments": 12 }
+      "content": "AI didn't replace writers.\n\nIt replaced their right to use em dashes.",
+      "url": "https://x.com/2hin_roy_/status/2021109227192975514",
+      "date": "2026-02-10"
     },
     {
       "id": "tw-3",
       "platform": "twitter",
-      "content": "Gave a talk at the local meetup about building performant React apps. Slides and recording coming soon!",
-      "url": "https://twitter.com/roy/status/3",
-      "date": "2024-10-05",
-      "engagement": { "likes": 67, "retweets": 8, "comments": 5 }
+      "content": "People afraid of using Excel,\n\nEnds up buying or building SaaS tools.",
+      "url": "https://x.com/2hin_roy_/status/2016373831380943300",
+      "date": "2026-01-28"
+    },
+    {
+      "id": "tw-4",
+      "platform": "twitter",
+      "content": "The moment you attach Microsoft Teams or Slack to any craft,\n\nYou'll lose interest in it within 5 years or sooner.",
+      "url": "https://x.com/2hin_roy_/status/2009889934849782053",
+      "date": "2026-01-10"
     }
   ],
   "linkedin": [
     {
       "id": "li-1",
       "platform": "linkedin",
-      "content": "Excited to share that I've been promoted to Senior Software Engineer! Grateful for an amazing team and the opportunity to lead impactful projects.",
-      "url": "https://linkedin.com/in/roy/posts/1",
-      "date": "2024-11-01",
-      "engagement": { "likes": 234, "comments": 42 }
+      "content": "10 essential tips to keep in mind before your next technical interview: research the company, prepare questions, test your setup, have an IDE ready, practice your professional summary, know your resume, review questions on AmbitionBox and Glassdoor, and keep a notebook handy.",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7424640357323333632/",
+      "date": "2026-02-04",
+      "engagement": { "likes": 25, "comments": 1 }
     },
     {
       "id": "li-2",
       "platform": "linkedin",
-      "content": "After mentoring 5 junior developers this year, here are my top lessons learned about effective technical mentorship...",
-      "url": "https://linkedin.com/in/roy/posts/2",
-      "date": "2024-09-15",
-      "engagement": { "likes": 156, "comments": 28 }
+      "content": "10 reasons why idea generation and tool mastery matter today. AI coding tools like Claude Code, Copilot, and Cursor enable rapid transformation of ideas into products. The traditional cycle (Idea > MVP > Ship > Iterate) has accelerated dramatically. AI accelerates building, but engineers still decide what's worth building and how far to take it.",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7422468271418920961/",
+      "date": "2026-01-29",
+      "engagement": { "likes": 18, "comments": 3 }
+    },
+    {
+      "id": "li-3",
+      "platform": "linkedin",
+      "content": "A 10-point guide for employees during their notice period: prepare a handover document, set up knowledge transfer sessions, document ongoing blockers, facilitate ownership transition, collect key documents like relieving letter and Form 16, and request professional recommendations.",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7384816285160914944/",
+      "date": "2025-10-17",
+      "engagement": { "likes": 29, "comments": 2 }
     }
   ]
 }
