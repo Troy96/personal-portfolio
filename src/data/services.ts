@@ -42,7 +42,7 @@ export const services: Service[] = [
   },
   {
     id: "svc-4",
-    title: "Tech Career Services",
+    title: "Tech Career Counselling",
     description:
       "Resume tailoring, LinkedIn optimization, and job search strategy for software engineers.",
     icon: "Briefcase",
