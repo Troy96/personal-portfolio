@@ -42,7 +42,7 @@ export function MobileNav() {
 
           {/* Panel */}
           <nav
-            className="fixed top-0 right-0 z-50 h-full w-[280px] bg-white/95 backdrop-blur-xl dark:bg-neutral-900/95 shadow-2xl"
+            className="fixed top-0 right-0 z-50 h-full w-[280px] bg-white dark:bg-neutral-900 shadow-2xl"
             style={{ animation: "slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1)" }}
           >
             <div className="flex items-center justify-end p-4">

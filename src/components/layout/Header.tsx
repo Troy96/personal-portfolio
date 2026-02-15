@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl">
-      <nav className="flex h-14 items-center justify-between rounded-full bg-white/90 px-6 shadow-lg shadow-neutral-900/5 backdrop-blur-xl dark:bg-neutral-900/90 dark:shadow-neutral-900/30">
+      <nav className="flex h-14 items-center justify-between rounded-full bg-white px-6 shadow-lg shadow-neutral-900/5 md:bg-white/80 md:backdrop-blur-xl dark:bg-neutral-900 dark:md:bg-neutral-900/80 dark:shadow-neutral-900/30">
         <a
           href="#hero"
           className="flex items-center gap-2 transition-opacity hover:opacity-80"
