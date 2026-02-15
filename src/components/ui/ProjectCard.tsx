@@ -6,8 +6,8 @@ import { Badge } from "./Badge";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card>
-      <div className="flex flex-col gap-3">
+    <Card className="h-full">
+      <div className="flex flex-col gap-3 h-full">
         <div className="flex items-start justify-between gap-2">
           <h3 className="text-lg font-semibold text-neutral-900 dark:text-white">
             {project.title}
@@ -40,7 +40,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-1.5 mt-auto">
           {project.technologies.map((tech) => (
             <Badge key={tech}>{tech}</Badge>
           ))}

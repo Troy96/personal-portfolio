@@ -349,7 +349,7 @@ export default async function Home() {
             <h3 className="text-lg font-semibold mb-4">Featured</h3>
             <div className="grid gap-4 sm:grid-cols-2">
               {featuredProjects.map((project) => (
-                <TiltCard key={project.id}>
+                <TiltCard key={project.id} className="h-full">
                   <ProjectCard project={project} />
                 </TiltCard>
               ))}

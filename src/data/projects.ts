@@ -3,57 +3,38 @@ import type { Project } from "@/types";
 export const projects: Project[] = [
   {
     id: "proj-1",
-    title: "DevBoard",
+    title: "X2IG",
     description:
-      "A real-time collaborative dashboard for development teams. Track deployments, monitor services, and manage incidents from a single pane of glass.",
-    technologies: ["Next.js", "TypeScript", "WebSocket", "PostgreSQL"],
-    githubUrl: "https://github.com/roy/devboard",
-    liveUrl: "https://devboard.dev",
+      "A platform for cross-posting content between X and Instagram. At present, it focuses on generating tweet screenshots that can be manually shared on Instagram.",
+    technologies: ["Node.js", "PostgreSQL", "Cloudinary", "X API", "Meta API for IG"],
+    githubUrl: "https://github.com/Troy96/x2ig",
     featured: true,
   },
   {
     id: "proj-2",
-    title: "MarkdownAI",
+    title: "Epstein Dossier",
     description:
-      "An AI-powered markdown editor that suggests completions, fixes grammar, and formats content as you type.",
-    technologies: ["React", "OpenAI API", "TailwindCSS", "Vercel AI SDK"],
-    githubUrl: "https://github.com/roy/markdown-ai",
+      "A searchable, structured archive of publicly released Epstein-related documents, built to enable fast queries, cross-referencing, and investigative analysis.",
+    technologies: ["Python", "FastAPI", "PostgreSQL", "Meilisearch"],
+    githubUrl: "https://github.com/Troy96/epstein-dossier",
     featured: true,
   },
   {
     id: "proj-3",
-    title: "CLI Task Manager",
+    title: "LRA",
     description:
-      "A fast, keyboard-driven task manager for the terminal. Supports projects, tags, priorities, and natural language dates.",
-    technologies: ["Rust", "SQLite", "clap"],
-    githubUrl: "https://github.com/roy/tasks-cli",
-    featured: false,
+      "A Chrome extension that captures jobs from LinkedIn, fetches full descriptions, and analyzes the most commonly requested skills and requirements across your job searches.",
+    technologies: ["HTML & CSS", "JavaScript", "Chrome Extension"],
+    githubUrl: "https://github.com/Troy96/linkedin-requirements-analyzer",
+    featured: true,
   },
   {
     id: "proj-4",
-    title: "Budget Tracker",
+    title: "Claude Trail",
     description:
-      "A privacy-first personal finance app that runs entirely in the browser. No accounts, no cloud — your data stays on your device.",
-    technologies: ["Svelte", "IndexedDB", "Chart.js", "PWA"],
-    liveUrl: "https://budget.roy.dev",
-    featured: false,
-  },
-  {
-    id: "proj-5",
-    title: "PhotoMap",
-    description:
-      "Plot your travel photos on an interactive map. Auto-extracts GPS data from EXIF metadata and clusters nearby shots.",
-    technologies: ["Python", "Flask", "Leaflet.js", "Pillow"],
-    githubUrl: "https://github.com/roy/photomap",
-    featured: false,
-  },
-  {
-    id: "proj-6",
-    title: "Open Source Contributions",
-    description:
-      "Active contributor to several open-source projects including developer tools, documentation, and libraries.",
-    technologies: ["TypeScript", "Go", "Python"],
-    githubUrl: "https://github.com/roy",
-    featured: false,
+      "A CLI tool to keep tabs on your Claude mileage. Track sessions, tokens, and usage patterns.",
+    technologies: ["TypeScript", "Commander.js", "Chalk", "Chokidar", "CLI"],
+    githubUrl: "https://github.com/Troy96/claudetrail",
+    featured: true,
   },
 ];
