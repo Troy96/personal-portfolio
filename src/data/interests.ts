@@ -3,45 +3,52 @@ import type { Interest, TravelPhoto } from "@/types";
 export const interests: Interest[] = [
   {
     id: "int-1",
-    name: "Open Source",
-    description:
-      "Contributing to and maintaining open-source projects. I believe in building in public and sharing knowledge.",
-    icon: "Github",
-  },
-  {
-    id: "int-2",
-    name: "Travel & Photography",
-    description:
-      "Exploring new places and capturing moments. I've visited 15+ countries and counting.",
-    icon: "Camera",
-  },
-  {
-    id: "int-3",
     name: "Reading",
     description:
-      "Avid reader of technical books, sci-fi, and philosophy. Always have a book on my nightstand.",
+      "Non-fiction, finance, and travel magazines. Authors I keep going back to: George Orwell, Yuval Noah Harari, Varun Mayya, Naval Ravikant.",
     icon: "BookOpen",
   },
   {
-    id: "int-4",
-    name: "Running",
+    id: "int-2",
+    name: "Content Creation & Consumption",
     description:
-      "Long-distance runner — it's my meditation. Training for my next half marathon.",
-    icon: "Activity",
+      "Creating on X, LinkedIn, and Instagram. Mindfully consuming and saving content categorically for a second brain I plan to build.",
+    icon: "PenLine",
+  },
+  {
+    id: "int-3",
+    name: "Side Projects & Solopreneurship",
+    description:
+      "I have wild ideas and in today's AI market it's addictive to convert them into something real. Building something that turns big is the goal.",
+    icon: "Rocket",
+  },
+  {
+    id: "int-4",
+    name: "Writing, Language & Humour",
+    description:
+      "I write daily about my thoughts and priorities. I use humour in everyday conversations to make things interesting. Might try standup comedy someday.",
+    icon: "Laugh",
   },
   {
     id: "int-5",
-    name: "Music",
+    name: "Travelling",
     description:
-      "Playing guitar and discovering new artists. Music is the soundtrack to my coding sessions.",
-    icon: "Music",
+      "Solo and family trips to mainstream and off-beat places within the country so far. Planning to go overseas this year.",
+    icon: "Camera",
   },
   {
     id: "int-6",
-    name: "Teaching",
+    name: "Series & Movies",
     description:
-      "Sharing knowledge through blog posts, talks, and mentoring. Teaching is the best way to learn.",
-    icon: "Presentation",
+      "Avid watcher with a never-ending watchlist. War, crime, mafia, mystery, and black comedy are my favourite themes.",
+    icon: "Film",
+  },
+  {
+    id: "int-7",
+    name: "Psychology & Philosophy",
+    description:
+      "Recently picked up as I crossed quarter life. Consuming works of the greats in the fields, yet to form my own takes.",
+    icon: "Brain",
   },
 ];
 

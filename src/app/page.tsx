@@ -10,8 +10,11 @@ import {
   Camera,
   BookOpen,
   Activity,
-  Music,
-  Presentation,
+  PenLine,
+  Rocket,
+  Laugh,
+  Film,
+  Brain,
   type LucideIcon,
 } from "lucide-react";
 import { siteConfig } from "@/lib/constants";
@@ -51,8 +54,11 @@ const iconMap: Record<string, LucideIcon> = {
   Camera,
   BookOpen,
   Activity,
-  Music,
-  Presentation,
+  PenLine,
+  Rocket,
+  Laugh,
+  Film,
+  Brain,
 };
 
 const contactSocialLinks = [
