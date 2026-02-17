@@ -174,11 +174,12 @@ export default async function Home() {
               <div className="h-56 w-56 sm:h-72 sm:w-72 lg:h-96 lg:w-96 rounded-full overflow-hidden shadow-2xl shadow-[var(--accent-shadow)] ring-4 ring-[var(--accent-border-subtle)]">
                 <Image
                   src="/avatar.jpg"
-                  alt="Roy"
+                  alt="Tuhin Roy — Senior Backend Engineer"
                   width={384}
                   height={384}
                   className="h-full w-full object-cover"
                   priority
+                  fetchPriority="high"
                 />
               </div>
             </div>
@@ -481,9 +482,9 @@ export default async function Home() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-medium text-neutral-900 dark:text-white">
+                      <h3 className="font-medium text-neutral-900 dark:text-white">
                         {interest.name}
-                      </h4>
+                      </h3>
                       <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
                         {interest.description}
                       </p>
