@@ -5,7 +5,7 @@ export const siteConfig = {
   title: "Tuhin Roy - Senior Backend Engineer",
   description:
     "Personal portfolio of Tuhin Roy — senior backend engineer with 6.5+ years of experience in Node.js, AWS, and system design.",
-  url: "https://roy.dev",
+  url: "https://tuhinroy.in",
   ogImage: "/opengraph-image",
   links: {
     github: "https://github.com/Troy96/",
@@ -13,7 +13,7 @@ export const siteConfig = {
     instagram: "https://instagram.com/2hin_roy_",
     linkedin: "https://linkedin.com/in/tuhin-roy",
     email: "tuhin.careers@gmail.com",
-    substack: "https://tuhinroy.substack.com",
+    substack: "https://2hin.substack.com",
   },
 };
 

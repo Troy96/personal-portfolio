@@ -102,6 +102,7 @@ export interface BlogPost {
   url: string;
   publishedAt: string;
   categories: string[];
+  bodyHtml?: string;
 }
 
 export interface NavLink {
