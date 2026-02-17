@@ -93,6 +93,16 @@ const jsonLd = {
       mainEntity: { "@id": `${siteConfig.url}/#person` },
       isPartOf: { "@id": `${siteConfig.url}/#website` },
     },
+    {
+      "@type": "Blog",
+      "@id": `${siteConfig.url}/blog#blog`,
+      url: `${siteConfig.url}/blog`,
+      name: `Blog | ${siteConfig.name}`,
+      description:
+        "Thoughts on backend engineering, system design, and software development by Tuhin Roy.",
+      author: { "@id": `${siteConfig.url}/#person` },
+      isPartOf: { "@id": `${siteConfig.url}/#website` },
+    },
   ],
 };
 

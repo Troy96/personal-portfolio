@@ -13,6 +13,7 @@ export const siteConfig = {
     instagram: "https://instagram.com/2hin_roy_",
     linkedin: "https://linkedin.com/in/tuhin-roy",
     email: "tuhin.careers@gmail.com",
+    substack: "https://tuhinroy.substack.com",
   },
 };
 
@@ -26,4 +27,5 @@ export const navLinks: NavLink[] = [
   { label: "Social", href: "#social" },
   { label: "Interests", href: "#interests" },
   { label: "Contact", href: "#contact" },
+  { label: "Blog", href: "/blog" },
 ];

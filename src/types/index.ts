@@ -95,6 +95,15 @@ export interface ContactFormData {
   message: string;
 }
 
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  url: string;
+  publishedAt: string;
+  categories: string[];
+}
+
 export interface NavLink {
   label: string;
   href: string;
