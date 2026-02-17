@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     "Personal portfolio of Tuhin Roy — senior backend engineer with 6.5+ years of experience in Node.js, AWS, and system design.",
   url: "https://roy.dev",
-  ogImage: "/images/og.png",
+  ogImage: "/opengraph-image",
   links: {
     github: "https://github.com/Troy96/",
     twitter: "https://x.com/2hin_roy_",
