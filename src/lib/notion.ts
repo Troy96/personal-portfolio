@@ -1,9 +1,6 @@
-import { Client } from "@notionhq/client";
 import type { NowItem } from "@/types";
 
-function getNotionClient() {
-  return new Client({ auth: process.env.NOTION_API_KEY });
-}
+const NOTION_API_VERSION = "2022-06-28";
 
 type NotionPage = {
   id: string;
@@ -54,27 +51,43 @@ export async function fetchNowItems(): Promise<NowItem[]> {
   }
 
   try {
-    const notion = getNotionClient();
-    const response = await notion.dataSources.query({
-      data_source_id: process.env.NOTION_NOW_DATABASE_ID,
-      sorts: [
-        { property: "Order", direction: "ascending" },
-        { property: "Date", direction: "descending" },
-      ],
-    });
+    const res = await fetch(
+      `https://api.notion.com/v1/databases/${process.env.NOTION_NOW_DATABASE_ID}/query`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.NOTION_API_KEY}`,
+          "Notion-Version": NOTION_API_VERSION,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          sorts: [
+            { property: "Order", direction: "ascending" },
+            { property: "Date", direction: "descending" },
+          ],
+        }),
+        next: { revalidate: 3600 },
+      }
+    );
 
-    return response.results.map((page) => {
-      const p = (page as NotionPage).properties;
+    if (!res.ok) {
+      console.error("Notion API error:", res.status);
+      return [];
+    }
+
+    const data = await res.json();
+
+    return data.results.map((page: NotionPage) => {
+      const p = page.properties;
       return {
         id: page.id,
-        title: getTitle(p.Title),
-        category: getSelect(p.Category) as NowItem["category"],
-        status: getSelect(p.Status) as NowItem["status"],
+        title: getRichText(p.Title),
+        category: getSelect(p.Category),
+        status: getSelect(p.Status),
         description: getRichText(p.Description) || undefined,
         imageUrl: getFileUrl(p.Image),
         link: getUrl(p.Link),
         date: getDate(p.Date),
-        order: getNumber(p.Order),
       };
     });
   } catch (error) {

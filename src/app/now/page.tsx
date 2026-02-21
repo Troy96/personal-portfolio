@@ -7,6 +7,7 @@ import {
   MapPin,
   UtensilsCrossed,
   Activity,
+  Layers,
 } from "lucide-react";
 import { siteConfig } from "@/lib/constants";
 import { fetchNowItems } from "@/lib/notion";
@@ -25,41 +26,39 @@ export const metadata: Metadata = {
   },
 };
 
-const categoryConfig: Record<
-  NowItem["category"],
+const categoryIcons: Record<
+  string,
   { icon: React.ComponentType<{ className?: string }>; label: string }
 > = {
+  Book: { icon: BookOpen, label: "Books" },
   Books: { icon: BookOpen, label: "Books" },
   Music: { icon: Music, label: "Music" },
+  Podcast: { icon: Headphones, label: "Podcasts" },
   Podcasts: { icon: Headphones, label: "Podcasts" },
   "Movies/Series": { icon: Clapperboard, label: "Movies & Series" },
+  Movie: { icon: Clapperboard, label: "Movies & Series" },
   Travel: { icon: MapPin, label: "Travel" },
   Food: { icon: UtensilsCrossed, label: "Food" },
+  Activity: { icon: Activity, label: "Activities" },
   Activities: { icon: Activity, label: "Activities" },
 };
 
-const categoryOrder: NowItem["category"][] = [
-  "Books",
-  "Music",
-  "Podcasts",
-  "Movies/Series",
-  "Travel",
-  "Food",
-  "Activities",
-];
+const defaultCategoryIcon = { icon: Layers, label: "" };
 
 export default async function NowPage() {
   const items = await fetchNowItems();
 
   const grouped = items.reduce(
     (acc, item) => {
-      (acc[item.category] ??= []).push(item);
+      if (item.category) {
+        (acc[item.category] ??= []).push(item);
+      }
       return acc;
     },
     {} as Record<string, NowItem[]>
   );
 
-  const categories = categoryOrder.filter((cat) => grouped[cat]?.length);
+  const categories = Object.keys(grouped);
 
   return (
     <section className="mx-auto max-w-5xl px-6 lg:px-8 py-20 sm:py-24">
@@ -74,7 +73,8 @@ export default async function NowPage() {
 
       {categories.length > 0 ? (
         categories.map((category, i) => {
-          const { icon: Icon, label } = categoryConfig[category];
+          const { icon: Icon, label } =
+            categoryIcons[category] ?? defaultCategoryIcon;
           return (
             <AnimatedSection
               key={category}
@@ -83,7 +83,7 @@ export default async function NowPage() {
             >
               <h2 className="flex items-center gap-2 text-xl font-semibold text-neutral-900 dark:text-white mb-4">
                 <Icon className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
-                {label}
+                {label || category}
               </h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 {grouped[category].map((item) => (

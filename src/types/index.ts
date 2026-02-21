@@ -108,15 +108,8 @@ export interface BlogPost {
 export interface NowItem {
   id: string;
   title: string;
-  category:
-    | "Books"
-    | "Music"
-    | "Podcasts"
-    | "Movies/Series"
-    | "Travel"
-    | "Food"
-    | "Activities";
-  status: "Currently" | "Recently";
+  category: string;
+  status: string;
   description?: string;
   imageUrl?: string;
   link?: string;
