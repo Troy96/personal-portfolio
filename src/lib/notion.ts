@@ -66,7 +66,7 @@ export async function fetchNowItems(): Promise<NowItem[]> {
             { property: "Date", direction: "descending" },
           ],
         }),
-        next: { revalidate: 3600 },
+        next: { revalidate: 1 },
       }
     );
 

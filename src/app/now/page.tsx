@@ -15,7 +15,7 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { NowCard } from "@/components/ui/NowCard";
 import type { NowItem } from "@/types";
 
-export const revalidate = 3600;
+export const revalidate = 1;
 
 export const metadata: Metadata = {
   title: `Now | ${siteConfig.name}`,
