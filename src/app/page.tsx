@@ -104,7 +104,7 @@ export default async function Home() {
                   <span className="relative inline-flex items-center gap-1.5 rounded-full border border-green-200 bg-green-50 px-3 py-0.5 text-xs font-medium text-green-700 dark:border-green-500/20 dark:bg-green-500/10 dark:text-green-400">
                     <span className="relative flex h-2 w-2">
                       <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" style={{ animation: "pulse-ring 1.5s ease-out infinite" }} />
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" style={{ animation: "blink-dot 1.5s ease-in-out infinite" }} />
                     </span>
                     Open to Work
                   </span>

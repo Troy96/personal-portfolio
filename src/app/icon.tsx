@@ -1,9 +1,14 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "fs/promises";
+import { join } from "path";
 
 export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
 
-export default function Icon() {
+export default async function Icon() {
+  const avatarData = await readFile(join(process.cwd(), "public/avatar.jpg"));
+  const avatarBase64 = `data:image/jpeg;base64,${avatarData.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -11,17 +16,16 @@ export default function Icon() {
           width: "100%",
           height: "100%",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: "6px",
-          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-          color: "white",
-          fontSize: "20px",
-          fontWeight: 700,
-          fontFamily: "system-ui, sans-serif",
+          borderRadius: "50%",
+          overflow: "hidden",
         }}
       >
-        T
+        <img
+          src={avatarBase64}
+          width={32}
+          height={32}
+          style={{ objectFit: "cover" }}
+        />
       </div>
     ),
     { ...size }
