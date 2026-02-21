@@ -105,6 +105,24 @@ export interface BlogPost {
   bodyHtml?: string;
 }
 
+export interface NowItem {
+  id: string;
+  title: string;
+  category:
+    | "Books"
+    | "Music"
+    | "Podcasts"
+    | "Movies/Series"
+    | "Travel"
+    | "Food"
+    | "Activities";
+  status: "Currently" | "Recently";
+  description?: string;
+  imageUrl?: string;
+  link?: string;
+  date?: string;
+}
+
 export interface NavLink {
   label: string;
   href: string;

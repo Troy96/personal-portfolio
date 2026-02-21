@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -11,6 +12,8 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const activeSection = useActiveSection();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     setMounted(true);
@@ -66,7 +69,7 @@ export function MobileNav() {
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <a
-                      href={link.href}
+                      href={link.href.startsWith("#") && !isHome ? `/${link.href}` : link.href}
                       onClick={() => setOpen(false)}
                       className={cn(
                         "flex items-center rounded-lg px-4 py-3 text-sm font-medium transition-colors",
