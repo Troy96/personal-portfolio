@@ -26,7 +26,7 @@ export function NowCard({ item }: { item: NowItem }) {
           </div>
         )}
         <div className="flex flex-col gap-1.5 min-w-0">
-          <h3 className="text-base font-semibold text-neutral-900 dark:text-white truncate">
+          <h3 className="text-base font-semibold text-neutral-900 dark:text-white break-words">
             {item.title}
           </h3>
           {item.description && (
